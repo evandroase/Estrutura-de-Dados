@@ -22,7 +22,7 @@ INICIO
   FIMSE;
   acumulador <- 0;
   PARA i <- 1 ATE n FACA
-	  SE(RESTO(n,i) = 0)
+    SE(RESTO(n,i) = 0)
       ENTAO acumulador <- acumulador + 1;
     FIMSE;
   FIMPARA;
@@ -58,7 +58,7 @@ Begin
 	if(n < 0)
     then n := -n;
   for i := 1 to n do
-	  if(n mod i = 0)
+    if(n mod i = 0)
       then acumulador := acumulador + 1;
   if(acumulador = 2)
     then resultado:= 'é primo'

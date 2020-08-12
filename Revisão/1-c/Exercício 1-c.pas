@@ -21,7 +21,7 @@ INICIO
   FIMSE;
   acumulador <- 0;
   PARA i <- 1 ATE n FACA
-	  SE(RESTO(n,i) = 0)
+    SE(RESTO(n,i) = 0)
       ENTAO acumulador <- acumulador + 1;
     FIMSE;
   FIMPARA;
@@ -34,7 +34,7 @@ FIM;
 INICIO
   EXIBA("Programa que avalia se um número é primo.");
   EXIBA("Digite um número:");
-	LEIA(N);
+  LEIA(N);
   PRIMO(N);
   EXIBA("O numero",PRIMO(N));
   EXIBA("Digite qualquer tecla para sair.");
@@ -56,7 +56,7 @@ Begin
 	if(n < 0)
     then n := -n;
   for i := 1 to n do
-	  if(n mod i = 0)
+    if(n mod i = 0)
       then acumulador := acumulador + 1;
   if(acumulador = 2)
     then PRIMO:= 'é primo'
@@ -64,12 +64,12 @@ Begin
 End;
 
 Begin
-	clrscr;
+  clrscr;
   writeln('Programa que avalia se um número é primo.');
   writeln('Digite um número:');
-	readln(N);
+  readln(N);
   PRIMO(N);
   writeln('O numero ',PRIMO(N));
   writeln('Digite qualquer tecla para sair.');
-	repeat until keypressed;
+  repeat until keypressed;
 End.
