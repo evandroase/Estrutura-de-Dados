@@ -53,7 +53,7 @@ Var
 
 Begin
   acumulador := 0;
-	if(n < 0)
+  if(n < 0)
     then n := -n;
   for i := 1 to n do
     if(n mod i = 0)
