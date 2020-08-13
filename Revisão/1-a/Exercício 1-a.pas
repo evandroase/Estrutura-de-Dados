@@ -52,7 +52,7 @@ Var
 
 Begin
   acumulador := 0;
-	if(n < 0)
+  if(n < 0)
     then n := -n;
   for i := 1 to n do
     if(n mod i = 0)
@@ -63,11 +63,11 @@ Begin
 End;
 
 Begin
-	clrscr;
+  clrscr;
   writeln('Programa que avalia se um número é primo.');
   writeln('Digite um número:');
 	readln(N);
   PRIMO(N);
   writeln('Digite qualquer tecla para sair.');
-	repeat until keypressed;
+  repeat until keypressed;
 End.
