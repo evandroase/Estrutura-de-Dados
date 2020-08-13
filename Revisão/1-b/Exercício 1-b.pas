@@ -35,9 +35,9 @@ FIM;
 INICIO
   EXIBA("Programa que avalia se um número é primo.");
   EXIBA("Digite um número:");
-	LEIA(N);
+  LEIA(N);
   PRIMO(N,RESULTADO);
-	EXIBA("O número ", RESULTADO);
+  EXIBA("O número ", RESULTADO);
   EXIBA("Digite qualquer tecla para sair.");
 FIM.
 
@@ -47,7 +47,7 @@ Program Numero_Primo;
 uses crt;
 Var
   N: integer;
-	RESULTADO: string;
+  RESULTADO: string;
 	
 Procedure PRIMO(n:integer; Var resultado:string);
 Var
@@ -69,9 +69,9 @@ Begin
   clrscr;
   writeln('Programa que avalia se um número é primo.');
   writeln('Digite um número:');
-	readln(N);
+  readln(N);
   PRIMO(N,RESULTADO);
-	writeln('O numero ',RESULTADO);
+  writeln('O numero ',RESULTADO);
   writeln('Digite qualquer tecla para sair.');
   repeat until keypressed;
 End.
