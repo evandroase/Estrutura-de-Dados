@@ -70,9 +70,9 @@ VAR
 Begin                                                                      // recebe as 4 notas bimestrais, nome e média.
   clrscr;
 	writeln('Programa que exibe a média e as notas de um aluno.');
-  for i := 1 to 2 do
+  for i := 1 to 40 do
     soma[i] := 0;
-  for i := 1 to 2 do
+  for i := 1 to 40 do
   begin
     writeln('Digite o nome do aluno:');
     readln(aluno[i].nome);
@@ -85,15 +85,15 @@ Begin                                                                      // re
         writeln('Digite uma nota entre 0 e 10.');
         readln(aluno[i].nota[j]);
       End;
-      soma[i] := soma[i] + aluno[i].nota[j];                               // Soma das 4 notas.
+      soma[i] := soma[i] + aluno[i].nota[j];                              
     End;
 	End;
-  for i := 1 to 2 do
-    aluno[i].media := soma[i]/4;                                           // Cálculo da média
-  for i := 1 to 2 do
+  for i := 1 to 40 do
+    aluno[i].media := soma[i]/4;                                         
+  for i := 1 to 40 do
   Begin
     writeln('');
-    writeln('BOLETIM ESCOLAR');                                              // Exibição do boletim no formato.
+    writeln('BOLETIM ESCOLAR');
     writeln('Aluno.......:',aluno[i].nome);
     writeln('NOTAS');
     for j := 1 to 4 do
