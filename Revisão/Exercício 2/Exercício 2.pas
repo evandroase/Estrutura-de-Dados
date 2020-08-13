@@ -20,9 +20,12 @@ Inicio
       senao inicio
               se(v[i] > maior)
                 entao maior <- v[i];
+              fimse; 
               se(v[i] < menor)
                 entao menor <- v[i];
+              fimse;
             fim;
+    fimse;
   fimpara;
   exiba("O maior numero é ",maior," e o menor é ", menor);
 Fim.
