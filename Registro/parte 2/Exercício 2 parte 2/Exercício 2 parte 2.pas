@@ -143,11 +143,10 @@ Begin
               writeln('CIDADE: ',prestador[i].cidade);
               acumulador := acumulador + 1;
            End;
-    if(acumulador = 0)
-      then writeln('Nenhum prestador na área escolhida.');
     writeln('');
   End;
-
+  if(acumulador = 0)
+    then writeln('Nenhum prestador na área escolhida.');
 End;
 
 Begin                                                        // MAIN
