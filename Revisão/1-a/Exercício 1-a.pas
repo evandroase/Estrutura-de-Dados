@@ -34,7 +34,7 @@ FIM;
 INICIO
   EXIBA("Programa que avalia se um número é primo.");
   EXIBA("Digite um número:");
-	LEIA(N);
+  LEIA(N);
   PRIMO(N);
   EXIBA("Digite qualquer tecla para sair.");
 FIM.
@@ -66,7 +66,7 @@ Begin
   clrscr;
   writeln('Programa que avalia se um número é primo.');
   writeln('Digite um número:');
-	readln(N);
+  readln(N);
   PRIMO(N);
   writeln('Digite qualquer tecla para sair.');
   repeat until keypressed;
