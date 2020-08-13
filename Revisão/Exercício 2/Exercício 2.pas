@@ -33,7 +33,7 @@ uses crt;
 Var
   v: array[1..100] of real;
   i: integer;
-	maior,menor: real;
+  maior,menor: real;
 Begin
   clrscr;
   writeln('Programa que avalia qual o maior e qual o menor entre 100 números.');
