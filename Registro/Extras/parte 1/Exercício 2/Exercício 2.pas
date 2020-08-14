@@ -140,10 +140,10 @@ Begin                                              // Menu
            End;    
       '2': Busca(menu);
       '3': funcionamento := 'N';
-    else
-      writeln('Opcao invalida.');
-   	End;
-	End;
+      else
+        writeln('Opcao invalida.');
+    End;
+  End;
   writeln('Saindo do programa.');
   repeat until keypressed;
 End.
