@@ -9,7 +9,7 @@ Program Cadastro_Imobiliaria;
 uses crt;
 Type
   cad_imobiliaria= Record
-	                   tipo: char;         
+	                   tipo: char;
                      endereco: String;
                      bairro: String;
                      valor: Real;
@@ -18,7 +18,7 @@ Type
   vet_cadastro = Array[1..300] of cad_imobiliaria;
 Var
   imovel: vet_cadastro;
-	cadastrar,buscar: char;
+  cadastrar,buscar: char;
 
 Procedure Cadastro(a:char);
 Var
