@@ -9,7 +9,7 @@ Program Cadastro_Imobiliaria;
 uses crt;
 Type
   cad_imobiliaria= Record
-	                   tipo: char;
+                     tipo: char;
                      endereco: String;
                      bairro: String;
                      valor: Real;
@@ -123,7 +123,7 @@ Begin
                End;
                acumulador := acumulador + 1;
              End;
-		End;
+    End;
     if(acumulador = 0)
       then WriteLn('Nenhum imovel foi encontrado.');
     writeln('');
