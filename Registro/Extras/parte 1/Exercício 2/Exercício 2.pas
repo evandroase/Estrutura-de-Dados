@@ -124,7 +124,7 @@ Begin                                              // Menu
   clrscr;
   funcionamento := 'S';
   i := 1;                 // Contador para cadastro
-	while(funcionamento = 'S')Do
+  while(funcionamento = 'S')Do
   Begin
     WriteLn('');
     writeln('Menu: Escolha uma das opções abaixo:');
