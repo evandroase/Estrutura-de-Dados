@@ -141,7 +141,7 @@ Begin                                              // Menu
       '2': Busca(menu);
       '3': funcionamento := 'N';
     else
-	      writeln('Opcao invalida.');
+      writeln('Opcao invalida.');
    	End;
 	End;
   writeln('Saindo do programa.');
