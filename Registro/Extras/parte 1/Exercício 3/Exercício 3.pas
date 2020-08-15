@@ -87,7 +87,7 @@ Begin
              funcionamento := 'N';
              writeln('Fim do Programa.');
            End;
-		End;	 
+    End;	 
   End;
   Repeat Until KeyPressed;
 End.
