@@ -38,7 +38,7 @@ End;
 Procedure Busca(a: char);
 Var
   j,maior: Integer;
-	cidade : String[20];
+  cidade : String[20];
   estado : String[2];
 Begin
   maior := 0;
