@@ -89,7 +89,7 @@ Begin
              acumulador:= acumulador + 1;
            End;
   End;
-	if(acumulador = 0)
+  if(acumulador = 0)
     then writeln('Nenhum voo encontrado para essa Origem.');
   acumulador := 0;
   writeln('');
