@@ -27,7 +27,7 @@ Begin
   writeln('Digite o nome da pessoa:');
   readln(cadastro[i].nome);
   writeln('');
-  writeln('Digite o mês de aniversário da pessoa.');
+  writeln('Digite o mês de aniversário da pessoa.');                   // Lendo o mês de aniversário.
   readln(cadastro[i].mes);
 	while((cadastro[i].mes <> 'janeiro') and (cadastro[i].mes <> 'fevereiro') and (cadastro[i].mes <> 'marco') and                        // Forcando a escrever certo.
   (cadastro[i].mes <> 'abril') and (cadastro[i].mes <> 'maio') and (cadastro[i].mes <> 'junho') and (cadastro[i].mes <> 'julho') and
@@ -36,31 +36,31 @@ Begin
     writeln('');
     writeln('Escreva o mes sem pontuacao e com todas as letras minusculas.');
     Readln(cadastro[i].mes);
-  End;
-  while(a = '1')Do
-  Begin                                                          // Esses ifs estão cuidando da consistência de dados.
-    writeln('Digite o dia de aniversario:');
-    readln(cadastro[i].dia);
-    if((cadastro[i].mes = 'janeiro') or (cadastro[i].mes = 'marco') or (cadastro[i].mes = 'maio') or (cadastro[i].mes = 'julho') or
-    (cadastro[i].mes = 'agosto') or (cadastro[i].mes = 'outubro') or (cadastro[i].mes = 'dezembro'))
-      then while((cadastro[i].dia < 0) and (cadastro[i].dia > 31))do
-             Begin
-               writeln('Digite um dia valido.');
-               readln(cadastro[i].dia);
-             End
-		  else if((cadastro[i].mes = 'abril') or (cadastro[i].mes = 'junho') or (cadastro[i].mes = 'setembro') or (cadastro[i].mes = 'novembro'))
-             then while((cadastro[i].dia < 0) and (cadastro[i].dia > 30))do
-                  Begin
-                    writeln('Digite um dia valido.');
-                    readln(cadastro[i].dia);
-                  End
-             else while((cadastro[i].dia < 0) and (cadastro[i].dia > 28))do
-                  Begin
-                    writeln('Digite um dia valido.');
-                    readln(cadastro[i].dia);
-                  End;
-    a:= '2';
-  End;
+  End;                                             // Lendo o dia de aniversário.
+                                                   // Esses ifs estão cuidando da consistência de dados.
+  writeln('Digite o dia de aniversario:');
+  readln(cadastro[i].dia);
+  if((cadastro[i].mes = 'janeiro') or (cadastro[i].mes = 'marco') or (cadastro[i].mes = 'maio') or
+	(cadastro[i].mes = 'julho') or (cadastro[i].mes = 'agosto') or (cadastro[i].mes = 'outubro') or (cadastro[i].mes = 'dezembro'))
+    then Begin
+		       while((cadastro[i].dia < 0) or (cadastro[i].dia > 31))do
+           Begin
+             writeln('Digite um dia valido.');
+             readln(cadastro[i].dia);
+           End;
+         End
+	  else if((cadastro[i].mes = 'abril') or (cadastro[i].mes = 'junho') or (cadastro[i].mes = 'setembro') or (cadastro[i].mes = 'novembro'))
+           then while((cadastro[i].dia < 0) or (cadastro[i].dia > 30))do
+                Begin
+                  writeln('Digite um dia valido.');
+                  readln(cadastro[i].dia);
+                End
+           else while((cadastro[i].dia < 0) or (cadastro[i].dia > 28))do
+                Begin
+                  writeln('Digite um dia valido.');
+                  readln(cadastro[i].dia);
+                End;
+  i:=i+1;
 End;
 
 Procedure Busca(b: char);
@@ -74,8 +74,10 @@ Begin
   for j:= 1 to 40 do
     if(cadastro[j].mes = mes)
       then Begin
+             writeln('');
              writeln('Nome do aniversariante: ',cadastro[j].nome);
              writeln('Dia do aniversario: ', cadastro[j].dia);
+             writeln('');
            End;        
 End;
 
