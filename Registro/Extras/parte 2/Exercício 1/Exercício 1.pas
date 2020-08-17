@@ -18,7 +18,7 @@ Type
 Var
   i: integer;
   cadastro: vet_cadastro;
-	menu: char;
+  menu: char;
   funcionamento: boolean;
 	
 Procedure Cadastrar (a:char);
@@ -29,7 +29,7 @@ Begin
   writeln('');
   writeln('Digite o mês de aniversário da pessoa.');                   // Lendo o mês de aniversário.
   readln(cadastro[i].mes);
-	while((cadastro[i].mes <> 'janeiro') and (cadastro[i].mes <> 'fevereiro') and (cadastro[i].mes <> 'marco') and                        // Forcando a escrever certo.
+  while((cadastro[i].mes <> 'janeiro') and (cadastro[i].mes <> 'fevereiro') and (cadastro[i].mes <> 'marco') and                        // Forcando a escrever certo.
   (cadastro[i].mes <> 'abril') and (cadastro[i].mes <> 'maio') and (cadastro[i].mes <> 'junho') and (cadastro[i].mes <> 'julho') and
   (cadastro[i].mes <> 'agosto') and (cadastro[i].mes <> 'setembro') and (cadastro[i].mes <> 'outubro') and (cadastro[i].mes <> 'novembro') and (cadastro[i].mes <> 'dezembro'))Do
   Begin
@@ -43,7 +43,7 @@ Begin
   if((cadastro[i].mes = 'janeiro') or (cadastro[i].mes = 'marco') or (cadastro[i].mes = 'maio') or
 	(cadastro[i].mes = 'julho') or (cadastro[i].mes = 'agosto') or (cadastro[i].mes = 'outubro') or (cadastro[i].mes = 'dezembro'))
     then Begin
-		       while((cadastro[i].dia < 0) or (cadastro[i].dia > 31))do
+           while((cadastro[i].dia < 0) or (cadastro[i].dia > 31))do
            Begin
              writeln('Digite um dia valido.');
              readln(cadastro[i].dia);
@@ -83,7 +83,7 @@ End;
 
 Begin
   writeln('Programa de cadastro. Escolha uma das opções abaixo:');
-	funcionamento := true;
+  funcionamento := true;
   i := 1;
   while(funcionamento = true)Do
   Begin
