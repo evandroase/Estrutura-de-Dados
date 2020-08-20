@@ -10,6 +10,10 @@ B ­ 2 cursos             R$  60,00
 C ­ 3 cursos             R$  90,00
 D ­ outros               R$  100,00
 
+Para os  sócios da SBC o valor a pagar terá um desconto de 50%. O algoritmo deverá permitir a entrada de
+vários registros (no máximo 1000) até que uma condição de finalização seja satisfeita. Calcular e exibir também
+o total geral arrecadado com o evento e quantos alunos se matricularam em cada um dos tipos de participação.
+
 }
 
 Program Cadastro_Aluno;
