@@ -44,7 +44,7 @@ Begin
     Readln(v[i]);
   End;
 
-	for i:= 1 to 4 do                          // Ordenacao no método da bolha usa 5-1 iterações.
+  for i:= 1 to 4 do                          // Ordenacao no método da bolha usa 5-1 iterações.
     for j:= 1 to 4 do
       if(v[j] > v[j+1])
         then Begin
