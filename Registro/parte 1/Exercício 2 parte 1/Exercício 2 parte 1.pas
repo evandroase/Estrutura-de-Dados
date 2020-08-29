@@ -31,10 +31,10 @@ INICIO                                                                     // re
       FIMENQUANTO;
       soma[i] <- soma[i] + aluno[i].nota[j];                               // Soma das 4 notas.
     FIMPARA;
-	FIMPARA;
+  FIMPARA;
   PARA i <- 1 ATE 40 FACA
     aluno[i].media <- soma[i]/4;                                           // Cálculo da média
-	FIMPARA;
+  FIMPARA;
   PARA i <- 1 ATE 40 FACA
     EXIBA("BOLETIM ESCOLAR");                                              // Exibição do boletim no formato.
     EXIBA("Aluno.......:",aluno[i].nome);
