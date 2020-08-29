@@ -87,7 +87,7 @@ Begin                                                                      // re
       End;
       soma[i] := soma[i] + aluno[i].nota[j];                              
     End;
-	End;
+  End;
   for i := 1 to 40 do
     aluno[i].media := soma[i]/4;                                         
   for i := 1 to 40 do
