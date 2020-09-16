@@ -28,8 +28,8 @@ End;
 Procedure tamanho(Var tamanhoVetorParam: integer);     // 1 - Tamanho do vetor
 Begin
   writeln('Digite o tamanho do vetor:');
-  readln(tamanhoVetor);
-  writeln('Tamanho do vetor: ',tamanhoVetor);
+  readln(tamanhoVetorParam);
+  writeln('Tamanho do vetor: ',tamanhoVetorParam);
   writeln('');
 End;
 
@@ -100,7 +100,7 @@ End;
 
 Procedure pesquisaBinaria(a: char);     // 5(2) - Pesquisa binária
 Var
-  i, pesq, esq, dir,meio : integer;
+  i, Pesq, esq, dir,meio : integer;
   achou : boolean;
   resp : string;
 Begin
@@ -108,24 +108,24 @@ Begin
   while(resp <> 'N')do
   Begin
     writeln('Digite o valor da pesquisa: ');
-    readln(pesq);
+    readln(Pesq);
     esq := 1;
     dir := tamanhoVetor;
     achou := False;
     while((not achou) and (esq <= dir))do
     Begin
       meio := (esq + dir) div 2;
-      if(pesq = v[meio])
+      if(Pesq = v[meio])
         then achou := True
-        else if(pesq > v[meio])
+        else if(Pesq > v[meio])
                then esq:=meio + 1
                else dir:=meio - 1;
     End;
-		
+
     if (achou = True)
-      then writeln(pesq, ' foi localizado na posição: ', meio )
-      else writeln (pesq, ' não foi localizado!');
-			
+      then writeln(Pesq, ' foi localizado na posição: ', meio )
+      else writeln (Pesq, ' não foi localizado!');
+
     writeln('Continuar pesquisando? (S/N) : ');
     readln(resp);
     ClrScr;
@@ -134,26 +134,26 @@ End;
 
 Procedure pesquisaSequencial(pesquisa: char);    // 5(1) - Pesquisa Sequencial
 Var
-  i,pesq: Integer;
+  i,Pesq: Integer;
 Begin
   Repeat
     writeln('Digite o valor da pesquisa: ');
-    readln(pesq);
+    readln(Pesq);
     i := 1;
     while(i <= tamanhoVetor)do
     Begin
-      if(pesq = v[i])
+      if(Pesq = v[i])
         then Begin
-               writeln(pesq, ' foi localiz. pos.', i );
+               writeln(Pesq, ' foi localiz. pos.', i );
                i := tamanhoVetor + 1;
              End;
       i := i + 1;
     End;
     if (i = tamanhoVetor + 1)
-      then writeln (pesq, ' não foi localiz.!');
-  writeln('Deseja continuar pesquisando? (S/N)');
-  readln(pesquisa);
-  ClrScr;
+      then writeln (Pesq, ' não foi localiz.!');
+    writeln('Deseja continuar pesquisando? (S/N)');
+    readln(pesquisa);
+    ClrScr;
   Until pesquisa = 'N';
 End;
 
