@@ -95,7 +95,7 @@ Begin
            tipoPesquisa := '1';
            writeln('Você não escolheu o tipo de pesquisa. Escolha padrão = Pesquisa Sequencial');
          End;
-	end;
+  end;
 End;
 
 Procedure pesquisaBinaria(a: char);     // 5(2) - Pesquisa binária
@@ -174,7 +174,7 @@ Begin                                  // Programa principal.
       else writeln('Opção inexistente. Digite um valor entre 1 e 6.');
     End;
     writeln('');
-	Until (menu = '6');
+  Until (menu = '6');
   Repeat Until KeyPressed;
 End.
 
