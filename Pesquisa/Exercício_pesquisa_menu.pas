@@ -140,16 +140,16 @@ Begin
     writeln('Digite o valor da pesquisa: ');
     readln(pesq);
     i := 1;
-    while(i <= 10)do
+    while(i <= tamanhoVetor)do
     Begin
       if(pesq = v[i])
         then Begin
                writeln(pesq, ' foi localiz. pos.', i );
-               i := 11;
+               i := tamanhoVetor + 1;
              End;
       i := i + 1;
     End;
-    if (i = 11)
+    if (i = tamanhoVetor + 1)
       then writeln (pesq, ' não foi localiz.!');
   writeln('Deseja continuar pesquisando? (S/N)');
   readln(pesquisa);
@@ -177,4 +177,3 @@ Begin                                  // Programa principal.
   Until (menu = '6');
   Repeat Until KeyPressed;
 End.
-
