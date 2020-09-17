@@ -78,8 +78,27 @@ Begin
   Readln(L.elem[posicao].telefone);
   ClrScr;
   writeln('Cadastro efetuado com sucesso.');
-	
 End;
+
+Procedure excluiElemento(Var L:lista; posicao: integer);             // 5 - Exclui um elemento de sua escolha. 
+Var
+  i:integer;
+Begin
+  if(posicao <> L.num)
+    then for i:= posicao to (L.num -1)do
+				 Begin
+           L.elem[posicao].nome := L.elem[posicao + 1].nome;
+           L.elem[posicao].endereco := L.elem[posicao + 1].endereco;
+           L.elem[posicao].telefone := L.elem[posicao + 1].telefone;
+         End;
+	 L.num := L.num - 1;
+End;
+
+Function verificaQuantidade(L:lista): Integer;
+Begin
+  verificaQuantidade := L.num;
+End;
+
 
 Procedure consultaPosicao(posicao: integer);                         // 7 - Consulta a posição escolhida pelo usuário.
 Begin
@@ -103,6 +122,13 @@ Begin
              readln(posicao);
              adicionaPosicao(L,posicao); 
 					 End;
+      '5': Begin
+             writeln('Qual posicao você deseja excluir?');
+             readln(posicao);
+             excluiElemento(L,posicao);
+           End;
+      '6': writeln('Quantidade de clientes cadastrados:',verificaQuantidade(L));
+			 
 			'7': Begin
              writeln('Qual posicao deseja consultar?');
              readln(posicao); 
