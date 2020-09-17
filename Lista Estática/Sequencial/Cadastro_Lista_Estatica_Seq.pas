@@ -91,10 +91,10 @@ Begin
            L.elem[posicao].endereco := L.elem[posicao + 1].endereco;
            L.elem[posicao].telefone := L.elem[posicao + 1].telefone;
          End;
-	 L.num := L.num - 1;
+	  L.num := L.num - 1;
 End;
 
-Function verificaQuantidade(L:lista): Integer;
+Function verificaQuantidade(L:lista): Integer;                       // 6 - Verifica a quantidade de elementos do vetor.
 Begin
   verificaQuantidade := L.num;
 End;
