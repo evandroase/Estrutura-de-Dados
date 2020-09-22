@@ -87,7 +87,7 @@ Var
 Begin
   if(posicao <> L.num)
     then for i:= posicao to (L.num -1)do
-				 Begin
+         Begin
            L.elem[posicao].nome := L.elem[posicao + 1].nome;
            L.elem[posicao].endereco := L.elem[posicao + 1].endereco;
            L.elem[posicao].telefone := L.elem[posicao + 1].telefone;
