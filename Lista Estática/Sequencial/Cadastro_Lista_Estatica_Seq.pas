@@ -134,8 +134,7 @@ Begin
              readln(posicao); 
              consultaPosicao(posicao);
            End;
-	
-    	'8': writeln('Saindo do programa');
+      '8': writeln('Saindo do programa');
     end;
   Until (menu = '8');
   Repeat Until KeyPressed;
