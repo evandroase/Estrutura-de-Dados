@@ -1,5 +1,6 @@
 Program Cadastro_Lista_Estatica_Seq;
 uses crt;
+
 Const
   max = 500;
 
@@ -20,17 +21,17 @@ Var
 
 Procedure menuPrincipal(Var menu:char);                           // 0 - Menu Principal
 Begin
-    writeln('Programa de clientes.');
-    writeln('1 - Criar lista de clientes.');
-    writeln('2 - Conferir se lista está vazia.');
-    writeln('3 - Adicionar um cliente na sequência.');
-    writeln('4 - Adicionar um cliente em uma posição de sua escolha.');
-    writeln('5 - Excluir cliente.');
-    writeln('6 - Verificar quantidade de clientes cadastrados.');
-    writeln('7 - Confere uma posicao.');
-    writeln('8 - Sair.');
-	  readln(menu);
-    ClrScr;
+  writeln('Programa de clientes.');
+  writeln('1 - Criar lista de clientes.');
+  writeln('2 - Conferir se lista está vazia.');
+  writeln('3 - Adicionar um cliente na sequência.');
+  writeln('4 - Adicionar um cliente em uma posição de sua escolha.');
+  writeln('5 - Excluir cliente.');
+  writeln('6 - Verificar quantidade de clientes cadastrados.');
+  writeln('7 - Confere uma posicao.');
+  writeln('8 - Sair.');
+  readln(menu);
+  ClrScr;
 End;
 
 Procedure criaLista(Var L: lista);                                 // 1 - Criação da lista
@@ -68,7 +69,7 @@ Begin
     L.elem[i+1].nome := L.elem[i].nome;
     L.elem[i+1].endereco := L.elem[i].endereco;
     L.elem[i+1].telefone := L.elem[i].telefone;
-	End;
+  End;
   L.num := L.num + 1;
   writeln('Digite o nome do cliente:');
   Readln(L.elem[posicao].nome);
@@ -91,7 +92,7 @@ Begin
            L.elem[posicao].endereco := L.elem[posicao + 1].endereco;
            L.elem[posicao].telefone := L.elem[posicao + 1].telefone;
          End;
-	  L.num := L.num - 1;
+  L.num := L.num - 1;
 End;
 
 Function verificaQuantidade(L:lista): Integer;                       // 6 - Verifica a quantidade de elementos do vetor.
@@ -121,15 +122,14 @@ Begin
              writeln('Digite a posicao que deseja adicionar:');
              readln(posicao);
              adicionaPosicao(L,posicao); 
-					 End;
+           End;
       '5': Begin
              writeln('Qual posicao você deseja excluir?');
              readln(posicao);
              excluiElemento(L,posicao);
            End;
       '6': writeln('Quantidade de clientes cadastrados:',verificaQuantidade(L));
-			 
-			'7': Begin
+      '7': Begin
              writeln('Qual posicao deseja consultar?');
              readln(posicao); 
              consultaPosicao(posicao);
@@ -137,6 +137,6 @@ Begin
 	
     	'8': writeln('Saindo do programa');
     end;
-	Until (menu = '8');
+  Until (menu = '8');
   Repeat Until KeyPressed;
 End.
