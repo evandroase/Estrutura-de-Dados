@@ -1,0 +1,71 @@
+Exercícios
+
+1) Dado um vetor com 8 elementos, decidir e apontar qual o melhor tipo de pesquisa a ser
+aplicada no caso de necessidade de 1000 consultas nesse vetor.
+
+Testando a pesquisa sequencial :
+
+PS = 8 * 1000 = 8000
+
+Testando a pesquisa binária: 
+
+PB = 8² + 1000 * log (2³) = 64 + 3000 = 3064
+
+Portanto, pesquisa binária é melhor que sequencial nesse caso.
+
+2) Considere um arranjo com 8192 elementos. Qual o tipo de pesquisa é mais vantajoso
+para 1000 consultas?
+
+Testando a pesquisa sequencial :
+
+PS = 8192 * 1000 = 8192000
+
+Testando a pesquisa binária: 
+
+PB = 8192² + 1000 * log (8192) = 67108864 + 1000 * 13 = 67121864
+
+Portanto, pesquisa sequencial é melhor que binária nesse caso.
+
+3) Dado um vetor com 30 elementos, indicar qual o melhor método de pesquisa para uma
+necessidade de 250 consultas.
+
+Testando a pesquisa sequencial :
+
+PS = 30 * 250 = 7500
+
+Testando a pesquisa binária: 
+
+PB = 30² + 250 * log (30) = 900 + 250 * 4,9 = 2125 (aproximado)
+
+Portanto, pesquisa binária é melhor que sequencial nesse caso.
+
+
+4) Determinado arranjo contém 3875 elementos e há necessidade de realizar 327
+consultas. Nesse caso, qual método de pesquisa aplicar?
+
+Testando a pesquisa sequencial :
+
+PS = 3875 * 327 = 1267125
+
+Testando a pesquisa binária: 
+
+PB = 3875² + 327 * log (3075) = 15015625 + 327 * 11,6 = 15019418 (aproximado)
+
+Portanto, pesquisa sequencial é melhor que binária nesse caso.
+
+5) Dado um vetor com 1480 elementos e necessidade de 15 consultas qual tipo de
+pesquisa você implementaria?
+
+Testando a pesquisa sequencial :
+
+PS = 1480 * 15 = 22200
+
+Testando a pesquisa binária: 
+
+PB = 1480² + 15 * log (1480) = 2190400 + 15 * 10,5 = 2190558
+
+Portanto, pesquisa sequencial é melhor que binária nesse caso.
+
+Conclusão:
+- Quando n >> m  Aplicar Pesquisa Seqüencial !
+- Quando n << m  Aplicar Pesquisa Binária !
